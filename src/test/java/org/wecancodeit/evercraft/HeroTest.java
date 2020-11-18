@@ -39,5 +39,11 @@ class HeroTest {
         assertEquals(alignment, "Neutral");
     }
 
+    @Test
+    public void alignmentCanBeEvil(){
+        underTest.setAlignment("Evil");
+        assertThat(underTest.getAlignment()).isEqualTo("Evil");
+    }
+
 
 }

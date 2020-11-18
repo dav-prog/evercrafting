@@ -22,4 +22,8 @@ public class Hero {
     public String getAlignment() {
         return alignment;
     }
+
+    public void setAlignment(String alignment) {
+        this.alignment = alignment;
+    }
 }
