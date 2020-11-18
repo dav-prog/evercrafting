@@ -8,35 +8,36 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-class CharacterTest {
+class HeroTest {
 
-    private Character underTest;
+    private Hero underTest;
 
     @BeforeEach
     void setUp() {
-        underTest = new Character("name", "alignment");
+        underTest = new Hero("name", "Neutral");
     }
 
     @Test
-    public void shouldBeAbleToCreateACharacter() {
+    public void shouldBeAbleToCreateAHero() {
 
     }
     @Test
-    public void characterShouldHaveAName(){
+    public void heroShouldHaveAName(){
         String name = underTest.getName();
         assertThat(name).isEqualTo("name");
     }
 
     @Test
-    public void characterShouldBeAbleToChangeName(){
+    public void heroShouldBeAbleToChangeName(){
         underTest.setName("newName");
         assertThat(underTest.getName()).isEqualTo("newName");
     }
 
     @Test
-    public void characterShouldHaveAnAlignment(){
+    public void heroShouldHaveAnAlignment(){
         String alignment = underTest.getAlignment();
-        assertEquals(alignment, "alignment");
+        assertEquals(alignment, "Neutral");
     }
+
 
 }
