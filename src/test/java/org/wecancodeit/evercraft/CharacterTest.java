@@ -1,20 +1,33 @@
 package org.wecancodeit.evercraft;
 
-import org.assertj.core.api.Assert;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class CharacterTest {
+
+    private Character underTest;
+
+    @BeforeEach
+    void setUp() {
+        underTest = new Character("name", "alignment");
+    }
+
     @Test
     public void shouldBeAbleToCreateACharacter() {
-        Character underTest = new Character("name");
+
     }
     @Test
     public void characterShouldHaveAName(){
-        Character underTest = new Character("name");
+
         String name = underTest.getName();
-        assertEquals("name", name);
+        assertEquals(name,"name");
+    }
+    @Test
+    public void characterShouldHaveAnAlignment(){
+        String alignment = underTest.getAlignment();
+        assertEquals(alignment, "alignment");
     }
 }
