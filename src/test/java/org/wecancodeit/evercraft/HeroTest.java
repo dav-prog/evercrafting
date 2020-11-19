@@ -17,6 +17,8 @@ class HeroTest {
     @BeforeEach
     void setUp() {
         underTest = new Hero("name", NEUTRAL);
+
+        attack = new Attack(underTest, underTest);
     }
 
     @Test
@@ -97,6 +99,10 @@ class HeroTest {
         underTest.damage(6);
         assertFalse(underTest.isAlive());
     }
-
+    @Test
+    public void rollNatural20AndDamageIsDoubled(){
+        attack.resolve(20);
+        assertEquals(2,underTest.getDamage());
+    }
 
 }

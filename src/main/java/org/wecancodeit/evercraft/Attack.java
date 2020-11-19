@@ -13,10 +13,12 @@ public class Attack {
 
     public boolean resolve(int roll) {
         boolean hit = (roll >= defender.getArmorClass());
+        boolean critical = (roll == 20);
 
-        if (hit) {
-            defender.damage(1);
-        }
+        if (hit && critical) {
+            defender.damage(2);
+        }else if (hit)
+        { defender.damage(1);}
 
         return hit;
     }

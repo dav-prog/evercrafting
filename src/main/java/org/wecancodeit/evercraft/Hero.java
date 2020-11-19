@@ -4,8 +4,11 @@ public class Hero {
 
     private String name;
     private Alignment alignment;
-    private int ArmorClass = 10;
-    private int HitPoints = 5;
+    private int armorClass = 10;
+    private int hitPoints = 5;
+
+
+
     private int damage = 0;
 
     public Hero(String name, Alignment alignment) {
@@ -30,11 +33,14 @@ public class Hero {
     }
 
     public int getArmorClass() {
-        return ArmorClass;
+        return armorClass;
     }
 
     public int getHitPoints() {
-        return HitPoints - damage;
+        return hitPoints - damage;
+    }
+    public int getDamage() {
+        return damage;
     }
 
     public void damage(int points) {
