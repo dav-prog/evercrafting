@@ -52,4 +52,10 @@ class HeroTest {
         assertThat(underTest.getArmorClass()).isEqualTo(10);
     }
 
+    @Test
+    public void HitPointDefaultOf5(){
+        underTest.getHitPoints();
+        assertThat(underTest.getHitPoints()).isEqualTo(5);
+    }
+
 }
