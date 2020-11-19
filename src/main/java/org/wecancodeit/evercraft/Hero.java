@@ -6,6 +6,7 @@ public class Hero {
     private Alignment alignment;
     private int ArmorClass = 10;
     private int HitPoints = 5;
+    private int damage = 0;
 
     public Hero(String name, Alignment alignment) {
         this.name = name;
@@ -33,7 +34,11 @@ public class Hero {
     }
 
     public int getHitPoints() {
-        return HitPoints;
+        return HitPoints - damage;
+    }
+
+    public void damage(int points) {
+        this.damage += points;
     }
 
 }

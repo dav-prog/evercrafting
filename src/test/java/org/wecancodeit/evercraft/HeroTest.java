@@ -81,4 +81,11 @@ class HeroTest {
         Attack attack = new Attack(attacker, defender);
         assertTrue(attack.resolve(10));
     }
+
+    @Test
+    public void onePointOfDamageDecreaseHitPointsByOne(){
+        underTest.damage(1);
+        assertThat(underTest.getHitPoints()).isEqualTo(4);
+    }
+
 }
