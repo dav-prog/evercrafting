@@ -91,6 +91,10 @@ class HeroTest {
     public void HeroIsAliveDefault(){
         assertTrue(underTest.isAlive());
     }
-
+    @Test
+    public void DeadIfMoreDamagePointsThanHP(){
+        underTest.damage(6);
+        assertFalse(underTest.isAlive());
+    }
 
 }
