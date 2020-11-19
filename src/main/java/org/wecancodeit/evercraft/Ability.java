@@ -1,7 +1,5 @@
 package org.wecancodeit.evercraft;
 
-import java.util.EmptyStackException;
-
 public class Ability {
 
     private int score = 10;
@@ -19,6 +17,14 @@ public class Ability {
             score = 0;
         }
         { this.score = score; }
+    }
+
+    public int modifier() {
+        return Math.floorDiv(this.score - 10 , 2) ;
+    }
+
+    public int getModifier() {
+        return modifier();
     }
 }
 

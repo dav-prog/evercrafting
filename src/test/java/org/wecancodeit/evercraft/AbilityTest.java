@@ -37,4 +37,12 @@ public class AbilityTest {
         underTest.setScore(-5);
         assertThat(underTest.getScore()).isEqualTo(0);
     }
+    @Test
+    public void scoreAffectsTheModifier(){
+        underTest.setScore(2);
+        assertThat(underTest.modifier()).isEqualTo(underTest.getModifier());
+    }
+
+
+
 }
