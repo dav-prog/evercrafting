@@ -35,4 +35,5 @@ public class Hero {
     public int getHitPoints() {
         return HitPoints;
     }
+
 }

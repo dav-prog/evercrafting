@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.wecancodeit.evercraft.Alignment.*;
 
 
@@ -53,9 +54,17 @@ class HeroTest {
     }
 
     @Test
-    public void HitPointDefaultOf5(){
+    public void hitPointDefaultOf5(){
         underTest.getHitPoints();
         assertThat(underTest.getHitPoints()).isEqualTo(5);
+    }
+
+    @Test
+    public void hitsWhenAttackBeatsArmorClass(){
+        Hero attacker = new Hero("attacker", NEUTRAL);
+        Hero defender = new Hero("defender",NEUTRAL);
+        Attack attack = new Attack(attacker, defender);
+        assertTrue(attack.resolve());
     }
 
 }
