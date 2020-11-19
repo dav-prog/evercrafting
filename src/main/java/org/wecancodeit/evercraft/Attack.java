@@ -11,8 +11,13 @@ public class Attack {
         this.defender = defender;
     }
 
-    public boolean resolve(int roll){
+    public boolean resolve(int roll) {
+        boolean hit = (roll >= defender.getArmorClass());
 
-        return roll >= defender.getArmorClass();
+        if (hit) {
+            defender.damage(1);
+        }
+
+        return hit;
     }
 }

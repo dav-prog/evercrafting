@@ -12,6 +12,7 @@ import static org.wecancodeit.evercraft.Alignment.*;
 class HeroTest {
 
     private Hero underTest;
+    private Attack attack;
 
     @BeforeEach
     void setUp() {
@@ -96,5 +97,6 @@ class HeroTest {
         underTest.damage(6);
         assertFalse(underTest.isAlive());
     }
+
 
 }
