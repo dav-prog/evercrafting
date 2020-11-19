@@ -41,4 +41,7 @@ public class Hero {
         this.damage += points;
     }
 
+    public boolean isAlive() {
+        return getHitPoints() > 0;
+    }
 }

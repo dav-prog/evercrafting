@@ -87,5 +87,10 @@ class HeroTest {
         underTest.damage(1);
         assertThat(underTest.getHitPoints()).isEqualTo(4);
     }
+    @Test
+    public void HeroIsAliveDefault(){
+        assertTrue(underTest.isAlive());
+    }
+
 
 }
