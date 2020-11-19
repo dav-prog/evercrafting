@@ -4,6 +4,7 @@ public class Hero {
 
     private String name;
     private Alignment alignment;
+    private int ArmorClass = 10;
 
     public Hero(String name, Alignment alignment) {
         this.name = name;
@@ -24,5 +25,9 @@ public class Hero {
 
     public void setAlignment(Alignment alignment) {
         this.alignment = alignment;
+    }
+
+    public int getArmorClass() {
+        return ArmorClass;
     }
 }

@@ -46,4 +46,10 @@ class HeroTest {
         assertThat(underTest.getAlignment()).isEqualTo(GOOD);
     }
 
+    @Test
+    public void hasAnArmorClassDefaultOf10(){
+        underTest.getArmorClass();
+        assertThat(underTest.getArmorClass()).isEqualTo(10);
+    }
+
 }
