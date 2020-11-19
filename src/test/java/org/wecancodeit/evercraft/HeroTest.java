@@ -73,4 +73,12 @@ class HeroTest {
         Attack attack = new Attack(attacker, defender);
         assertFalse(attack.resolve(9));
     }
+
+    @Test
+    public void hitsWhenAttackMeetsArmorClass() {
+        Hero attacker = new Hero("attacker", NEUTRAL);
+        Hero defender = new Hero("defender", NEUTRAL);
+        Attack attack = new Attack(attacker, defender);
+        assertTrue(attack.resolve(10));
+    }
 }

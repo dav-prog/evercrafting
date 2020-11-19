@@ -13,6 +13,6 @@ public class Attack {
 
     public boolean resolve(int roll){
 
-        return roll > defender.getArmorClass();
+        return roll >= defender.getArmorClass();
     }
 }
