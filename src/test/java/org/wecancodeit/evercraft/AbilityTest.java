@@ -32,4 +32,9 @@ public class AbilityTest {
         underTest.setScore(21);
         assertThat(underTest.getScore()).isEqualTo(20);
     }
+    @Test
+    public void scoreCannotBeLessThan0(){
+        underTest.setScore(-5);
+        assertThat(underTest.getScore()).isEqualTo(0);
+    }
 }

@@ -12,8 +12,12 @@ public class Ability {
     }
 
     public void setScore(int score) {
-        if (score > 20) { score = 20; }
-
+        if (score > 20) {
+            score = 20;
+        }
+        if (score < 0) {
+            score = 0;
+        }
         { this.score = score; }
     }
 }
