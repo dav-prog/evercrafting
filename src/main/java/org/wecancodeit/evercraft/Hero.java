@@ -3,10 +3,9 @@ package org.wecancodeit.evercraft;
 public class Hero {
 
     private String name;
-    private enum  Alignment{Evil, Neutral, Good};
-    private String alignment;
+    private Alignment alignment;
 
-    public Hero(String name, String alignment) {
+    public Hero(String name, Alignment alignment) {
         this.name = name;
         this.alignment = alignment;
     }
@@ -19,11 +18,11 @@ public class Hero {
         this.name = name;
     }
 
-    public String getAlignment() {
+    public Alignment getAlignment() {
         return alignment;
     }
 
-    public void setAlignment(String alignment) {
+    public void setAlignment(Alignment alignment) {
         this.alignment = alignment;
     }
 }

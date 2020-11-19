@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.wecancodeit.evercraft.Alignment.*;
 
 
 class HeroTest {
@@ -14,18 +15,12 @@ class HeroTest {
 
     @BeforeEach
     void setUp() {
-        underTest = new Hero("name", "Neutral");
+        underTest = new Hero("name", NEUTRAL);
     }
 
     @Test
     public void shouldBeAbleToCreateAHero() {
-
-    }
-    @Test
-    public void heroShouldHaveAName(){
-        String name = underTest.getName();
-        assertThat(name).isEqualTo("name");
-    }
+}
 
     @Test
     public void heroShouldBeAbleToChangeName(){
@@ -35,15 +30,20 @@ class HeroTest {
 
     @Test
     public void heroShouldHaveAnAlignment(){
-        String alignment = underTest.getAlignment();
-        assertEquals(alignment, "Neutral");
+        Alignment alignment = underTest.getAlignment();
+        assertEquals(alignment, NEUTRAL);
     }
 
     @Test
     public void alignmentCanBeEvil(){
-        underTest.setAlignment("Evil");
-        assertThat(underTest.getAlignment()).isEqualTo("Evil");
+        underTest.setAlignment(EVIL);
+        assertThat(underTest.getAlignment()).isEqualTo(EVIL);
     }
 
+    @Test
+    public void alignmentCanBeGood(){
+        underTest.setAlignment(GOOD);
+        assertThat(underTest.getAlignment()).isEqualTo(GOOD);
+    }
 
 }
