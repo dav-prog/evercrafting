@@ -17,7 +17,6 @@ class HeroTest {
     @BeforeEach
     void setUp() {
         underTest = new Hero("name", NEUTRAL);
-
         attack = new Attack(underTest, underTest);
     }
 
@@ -104,5 +103,6 @@ class HeroTest {
         attack.resolve(20);
         assertEquals(2,underTest.getDamage());
     }
+
 
 }
