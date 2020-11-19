@@ -5,8 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.wecancodeit.evercraft.Alignment.*;
 
 
@@ -21,50 +20,57 @@ class HeroTest {
 
     @Test
     public void shouldBeAbleToCreateAHero() {
-}
+    }
 
     @Test
-    public void heroShouldBeAbleToChangeName(){
+    public void heroShouldBeAbleToChangeName() {
         underTest.setName("newName");
         assertThat(underTest.getName()).isEqualTo("newName");
     }
 
     @Test
-    public void heroShouldHaveAnAlignment(){
+    public void heroShouldHaveAnAlignment() {
         Alignment alignment = underTest.getAlignment();
         assertEquals(alignment, NEUTRAL);
     }
 
     @Test
-    public void alignmentCanBeEvil(){
+    public void alignmentCanBeEvil() {
         underTest.setAlignment(EVIL);
         assertThat(underTest.getAlignment()).isEqualTo(EVIL);
     }
 
     @Test
-    public void alignmentCanBeGood(){
+    public void alignmentCanBeGood() {
         underTest.setAlignment(GOOD);
         assertThat(underTest.getAlignment()).isEqualTo(GOOD);
     }
 
     @Test
-    public void hasAnArmorClassDefaultOf10(){
+    public void hasAnArmorClassDefaultOf10() {
         underTest.getArmorClass();
         assertThat(underTest.getArmorClass()).isEqualTo(10);
     }
 
     @Test
-    public void hitPointDefaultOf5(){
+    public void hitPointDefaultOf5() {
         underTest.getHitPoints();
         assertThat(underTest.getHitPoints()).isEqualTo(5);
     }
 
     @Test
-    public void hitsWhenAttackBeatsArmorClass(){
+    public void hitsWhenAttackBeatsArmorClass() {
         Hero attacker = new Hero("attacker", NEUTRAL);
-        Hero defender = new Hero("defender",NEUTRAL);
+        Hero defender = new Hero("defender", NEUTRAL);
         Attack attack = new Attack(attacker, defender);
-        assertTrue(attack.resolve());
+        assertTrue(attack.resolve(11));
     }
 
+    @Test
+    public void missesWhenRollIsLessThanArmorClass() {
+        Hero attacker = new Hero("attacker", NEUTRAL);
+        Hero defender = new Hero("defender", NEUTRAL);
+        Attack attack = new Attack(attacker, defender);
+        assertFalse(attack.resolve(9));
+    }
 }
