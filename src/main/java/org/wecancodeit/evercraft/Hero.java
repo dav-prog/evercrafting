@@ -11,6 +11,8 @@ public class Hero {
     private int damage = 0;
     private int dexterity = 10;
     private int strength = 10;
+    private int constitution = 10;
+    private int wisdom = 10;
 
 
     public Hero(String name, Alignment alignment) {
@@ -35,7 +37,7 @@ public class Hero {
     }
 
     public int getArmorClass() {
-        return armorClass ;
+        return armorClass;
     }
 
     public int getHitPoints() {
@@ -92,6 +94,22 @@ public class Hero {
 
     public void setStrength(int strength) {
         this.strength = strength;
+    }
+
+    public int getConstitution() {
+        return constitution;
+    }
+
+    public void setConstitution(int constitution) {
+        this.constitution = constitution;
+    }
+
+    public int getWisdom() {
+        return wisdom;
+    }
+
+    public void setWisdom(int wisdom) {
+        this.wisdom = wisdom;
     }
 }
 

@@ -49,8 +49,16 @@ public class AbilityTest {
         assertThat(underTest.getDexterity()).isEqualTo(10);
     }
     @Test
-    public void strengthHasADefaultofTen(){
+    public void strengthHasADefaultOfTen(){
         assertThat(underTest.getStrength()).isEqualTo(10);
+    }
+    @Test
+    public void constitutionHasADefaultOfTen(){
+        assertThat(underTest.getConstitution()).isEqualTo(10);
+    }
+    @Test
+    public void wisdomHasADefaultOfTen(){
+        assertThat(underTest.getWisdom()).isEqualTo(10);
     }
 
 }
