@@ -64,7 +64,10 @@ public class AbilityTest {
     public void intelligenceHasADefaultOfTen(){
         assertThat(underTest.getIntelligence()).isEqualTo(10);
     }
-
+    @Test
+    public void charismaHasADefaultOfTen(){
+        assertThat(underTest.getCharisma()).isEqualTo(10);
+    }
 }
 
 

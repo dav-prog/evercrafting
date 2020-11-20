@@ -14,6 +14,7 @@ public class Hero {
     private int constitution = 10;
     private int wisdom = 10;
     private int intelligence = 10;
+    private int charisma = 10;
 
 
     public Hero(String name, Alignment alignment) {
@@ -119,6 +120,14 @@ public class Hero {
 
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
+    }
+
+    public int getCharisma() {
+        return charisma;
+    }
+
+    public void setCharisma(int charisma) {
+        this.charisma = charisma;
     }
 }
 
