@@ -13,6 +13,7 @@ public class Hero {
     private int strength = 10;
     private int constitution = 10;
     private int wisdom = 10;
+    private int intelligence = 10;
 
 
     public Hero(String name, Alignment alignment) {
@@ -110,6 +111,14 @@ public class Hero {
 
     public void setWisdom(int wisdom) {
         this.wisdom = wisdom;
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
     }
 }
 

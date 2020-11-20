@@ -60,6 +60,10 @@ public class AbilityTest {
     public void wisdomHasADefaultOfTen(){
         assertThat(underTest.getWisdom()).isEqualTo(10);
     }
+    @Test
+    public void intelligenceHasADefaultOfTen(){
+        assertThat(underTest.getIntelligence()).isEqualTo(10);
+    }
 
 }
 
