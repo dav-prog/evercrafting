@@ -1,5 +1,6 @@
 package org.wecancodeit.evercraft;
 
+
 public class Hero {
 
     private String name;
@@ -9,6 +10,8 @@ public class Hero {
     private int score = 10;
     private int damage = 0;
     private int dexterity = 10;
+    private int strength = 10;
+
 
     public Hero(String name, Alignment alignment) {
         this.name = name;
@@ -32,7 +35,7 @@ public class Hero {
     }
 
     public int getArmorClass() {
-        return armorClass;
+        return armorClass ;
     }
 
     public int getHitPoints() {
@@ -83,5 +86,12 @@ public class Hero {
         this.dexterity = dexterity;
     }
 
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
 }
 

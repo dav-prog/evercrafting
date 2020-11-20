@@ -48,6 +48,10 @@ public class AbilityTest {
     public void dexterityHasADefaultOf10(){
         assertThat(underTest.getDexterity()).isEqualTo(10);
     }
+    @Test
+    public void strengthHasADefaultofTen(){
+        assertThat(underTest.getStrength()).isEqualTo(10);
+    }
 
 }
 
