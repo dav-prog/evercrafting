@@ -44,7 +44,10 @@ public class AbilityTest {
         underTest.setScore(2);
         assertThat(underTest.modifier()).isEqualTo(underTest.getModifier());
     }
-
+    @Test
+    public void dexterityHasADefaultOf10(){
+        assertThat(underTest.getDexterity()).isEqualTo(10);
+    }
 
 }
 
