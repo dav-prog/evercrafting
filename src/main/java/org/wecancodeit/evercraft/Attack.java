@@ -17,8 +17,9 @@ public class Attack {
 
         if (hit && critical) {
             defender.damage(2);
-        }else if (hit)
-        { defender.damage(1);}
+        } else if (hit) {
+            defender.damage(1);
+        }
 
         return hit;
     }

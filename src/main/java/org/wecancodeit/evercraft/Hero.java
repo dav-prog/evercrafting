@@ -6,10 +6,9 @@ public class Hero {
     private Alignment alignment;
     private int armorClass = 10;
     private int hitPoints = 5;
-
-
-
+    private int score = 10;
     private int damage = 0;
+    private int dexterity;
 
     public Hero(String name, Alignment alignment) {
         this.name = name;
@@ -39,6 +38,7 @@ public class Hero {
     public int getHitPoints() {
         return hitPoints - damage;
     }
+
     public int getDamage() {
         return damage;
     }
@@ -50,4 +50,38 @@ public class Hero {
     public boolean isAlive() {
         return getHitPoints() > 0;
     }
+
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public void setDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        if (score > 20) {
+            score = 20;
+        }
+        if (score < 0) {
+            score = 0;
+        }
+        {
+            this.score = score;
+        }
+    }
+
+    public int modifier() {
+        return Math.floorDiv(this.score - 10, 2);
+    }
+
+    public int getModifier() {
+        return modifier();
+    }
+
 }
+

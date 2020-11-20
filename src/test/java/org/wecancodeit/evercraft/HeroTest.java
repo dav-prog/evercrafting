@@ -85,23 +85,26 @@ class HeroTest {
     }
 
     @Test
-    public void onePointOfDamageDecreaseHitPointsByOne(){
+    public void onePointOfDamageDecreaseHitPointsByOne() {
         underTest.damage(1);
         assertThat(underTest.getHitPoints()).isEqualTo(4);
     }
+
     @Test
-    public void HeroIsAliveDefault(){
+    public void HeroIsAliveDefault() {
         assertTrue(underTest.isAlive());
     }
+
     @Test
-    public void DeadIfMoreDamagePointsThanHP(){
+    public void DeadIfMoreDamagePointsThanHP() {
         underTest.damage(6);
         assertFalse(underTest.isAlive());
     }
+
     @Test
-    public void rollNatural20AndDamageIsDoubled(){
+    public void rollNatural20AndDamageIsDoubled() {
         attack.resolve(20);
-        assertEquals(2,underTest.getDamage());
+        assertEquals(2, underTest.getDamage());
     }
 
 

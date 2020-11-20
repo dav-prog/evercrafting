@@ -5,15 +5,15 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.wecancodeit.evercraft.Alignment.NEUTRAL;
 
 public class AbilityTest {
 
-    private Ability underTest;
-
+    private Hero underTest;
 
     @BeforeEach
     void setUp() {
-        underTest = new Ability();
+        underTest = new Hero("Hero", NEUTRAL);
     }
 
     @Test
@@ -28,21 +28,26 @@ public class AbilityTest {
     }
 
     @Test
-    public void scoreCannotBeMoreThan21(){
+    public void scoreCannotBeMoreThan21() {
         underTest.setScore(21);
         assertThat(underTest.getScore()).isEqualTo(20);
     }
+
     @Test
-    public void scoreCannotBeLessThan0(){
+    public void scoreCannotBeLessThan0() {
         underTest.setScore(-5);
         assertThat(underTest.getScore()).isEqualTo(0);
     }
+
     @Test
-    public void scoreAffectsTheModifier(){
+    public void scoreAffectsTheModifier() {
         underTest.setScore(2);
         assertThat(underTest.modifier()).isEqualTo(underTest.getModifier());
     }
 
 
-
 }
+
+
+
+
